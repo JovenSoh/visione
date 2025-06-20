@@ -57,7 +57,7 @@ The installation has been tested so far with:
 
 ## Installation (from source)
 ```bash
-pip install git+https://github.com/aimh-lab/visione.git
+pip install git+https://github.com/jovensoh/visione.git
 ```
 This should install the `visione` executable. Be sure the folder where pip installs binaries is in your `PATH` environment variable.
 
@@ -78,7 +78,7 @@ visione init test-collection
 cd test-collection
 ```
 Please check and eventually change the default configuration by editing the file [`config.yaml`](visione/skel/config.yaml) file, e.g., to select the analyses to perform on the videos and how to index them.
-Once you are done, you can import videos to the collection.
+Once you are done, you can import videos to the collection. Additionally, there is a `asset_token` file which you have to paste your GH token with pull permission.
 
 > **Note**: The first time you run other subcommands other than `init`, it will take a while to download and build the necessary Docker images. Subsequent runs will be faster.
 
