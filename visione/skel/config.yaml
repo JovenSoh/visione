@@ -85,8 +85,8 @@ analysis:
   # can specify overrides for the default parameters. To disable a feature
   # extractor, remove or comment its entry.
   features:
-    dinov2:
-      chunk-size: 1000  # Frames are processed in chunks of this size.
+    #dinov2:
+    #  chunk-size: 1000  # Frames are processed in chunks of this size.
     aladin:
       chunk-size: 1000  # Frames are processed in chunks of this size.
     clip-openai:
@@ -117,7 +117,7 @@ analysis:
   frame_cluster:
     # Which feature vector to employ in frames clustering. Must be one of the
     # feature extractors defined above.
-    feature: dinov2
+    feature: clip-openai
 
 
 # This section contains the configuration for the indexing stage ('visione
@@ -333,13 +333,13 @@ index:
   #    (https://github.com/facebookresearch/faiss/wiki/The-index-factory)
   features:
 
-    dinov2:
-      index_engine: str
-      index_type: topk-sq
-      index_params:
-        keep: 0.25
-        dim_multiplier: 100
-        rectify_negatives: true
+    #dinov2:
+    #  index_engine: str
+    #  index_type: topk-sq
+    #  index_params:
+    #    keep: 0.25
+    #    dim_multiplier: 100
+    #    rectify_negatives: true
 
     aladin:
       index_engine: str
