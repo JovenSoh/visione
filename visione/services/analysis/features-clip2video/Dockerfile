@@ -12,7 +12,9 @@ RUN git clone https://github.com/CryhanFang/CLIP2Video && \
 
 # Remove torch from original requirements.txt
 RUN sed -i '/torch/d' CLIP2Video/requirements.txt
-RUN pip install -r CLIP2Video/requirements.txt
+# Pre-install numpy to avoid ABI mismatch
+RUN pip install --no-cache-dir "numpy==1.26.4"
+RUN pip install --no-cache-dir -r CLIP2Video/requirements.txt
 
 # Install other dependencies
 RUN pip install gdown more_itertools==10.2.0 av==11.0.0 h5py==3.10.0 flask==2.2.3 "Werkzeug>=2.2,<3.0"
