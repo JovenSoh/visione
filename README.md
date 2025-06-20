@@ -57,7 +57,7 @@ The installation has been tested so far with:
 
 ## Installation (from source)
 ```bash
-pip install git+https://github.com/aimh-lab/visione.git
+pip install git+https://github.com/jovensoh/visione.git
 ```
 This should install the `visione` executable. Be sure the folder where pip installs binaries is in your `PATH` environment variable.
 
